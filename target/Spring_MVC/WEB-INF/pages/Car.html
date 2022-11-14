@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+<h2>Выбранное количество машин</h2>
+<table border="1">
+
+    <tr>
+      <th>Марка машины</th>
+      <th>Модель машины</th>
+      <th>Цвет машины</th>
+    </tr>
+
+
+      <tr th:each="car : ${countCar}">
+      <td th:utext="${car.getBrend()}">Марка машины</td>
+      <td th:utext="${car.getType()}">Модель машины</td>
+      <td th:utext="${car.getColor()}">Цвет машины</td>
+    </tr>
+
+
+</table>
+
+
+
+
+
+
+
+</body>
+</html>
