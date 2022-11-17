@@ -1,14 +1,17 @@
-package web.dao;
+package web.service;
 
 import model.Car;
 import org.springframework.stereotype.Component;
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class CarDAO {
+public class CarService {
+
+
     private List<Car> carList;
 
     {
@@ -28,9 +31,10 @@ public class CarDAO {
         return carList;
     }
     public List<Car> getCarList(int number) {
-        if (number>=5) {
-            return carList;
-        } else {return carList.stream().limit(number).collect(Collectors.toList());}
+        return carList.stream().limit(number).collect(Collectors.toList());
 
     }
+
+
+
 }
