@@ -27,11 +27,11 @@ public class CarService {
         carList.add(car4);
         carList.add(car5);
     }
-    public List<Car> getallCar() {
-        return carList;
-    }
-    public List<Car> getCarList(int number) {
-        return carList.stream().limit(number).collect(Collectors.toList());
+//    public List<Car> getallCar() {
+//        return carList;
+//    }
+    public List<Car> getCarList(Integer number) {
+       return (number == null) ? carList : carList.stream().limit(number).collect(Collectors.toList());
 
     }
 
